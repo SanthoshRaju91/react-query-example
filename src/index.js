@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ReactQueryCacheProvider, QueryCache } from 'react-query'
+import { Provider } from 'react-redux'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { configureStore } from './store'
+
+const queryCache = new QueryCache()
+const appStore = configureStore()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReactQueryCacheProvider queryCache={queryCache}>
+      <Provider store={appStore}>
+        <App />
+      </Provider>
+    </ReactQueryCacheProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

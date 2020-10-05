@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.App-header {    
+    height: 60px;
+    background-color: var(--primary);
+    box-shadow: 0 1px 1px var(--primary);   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-header h2 {
+    margin: 0;    
+    display: flex;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Main {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Main .Posts {
+    width: 50%;
+    overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.Main .Post {
+    width: 50%;
+    margin-left: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Link {
+    display: block;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    color: blue;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+.Link h4 {
+    margin: 0;
+}
+
+.Post-Preview {
+    margin: 20px 0;
+}
+
+.Toast-Wrapper {
+    position: fixed;    
+    top: 20px;
+    right: 0;
+}
+
+.Toast-Wrapper .Toast {
+    width: 300px;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0 1px 5px #B6BDC5;
+    padding: 20px;
+}
+
+.Toast-Wrapper .Toast button {
+    position: absolute;
+    right: 1em;
+    background: transparent;
+    border: none;
 }
